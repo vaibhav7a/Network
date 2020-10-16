@@ -71,7 +71,7 @@ extension APIDataManager {
     ///   - completion: block to be exceuted when the response is received
     @discardableResult
     public func makeAPICall<T: BaseMappable>(to endpoint: APIEndpoint,
-                                      withParameters parameters: Parameters? = nil,
+                                      withParameters parameters: Parameters!,
                                       ofType parameterType: ParameterType = .httpBody,
                                       completion: @escaping GenericCompletion<T>) -> DataRequest {
         Log.i("Headers: \(APIHeader.shared.headers)")
