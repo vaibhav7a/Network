@@ -9,14 +9,14 @@
 import Foundation
 import ObjectMapper
 
-typealias GenericAPIResponseResult<T: BaseMappable> = (successResponse: T?, errorResponse: APIError?, error: Error?)
-typealias GenericAPIArrayResponseResult<T: BaseMappable> = (successResponse: [T]?, errorResponse: APIError?, error: Error?)
-typealias GenericAPIVerificationResult = (success: Bool, errorResponse: Bool, error: Bool)
+public typealias GenericAPIResponseResult<T: BaseMappable> = (successResponse: T?, errorResponse: APIError?, error: Error?)
+public typealias GenericAPIArrayResponseResult<T: BaseMappable> = (successResponse: [T]?, errorResponse: APIError?, error: Error?)
+public typealias GenericAPIVerificationResult = (success: Bool, errorResponse: Bool, error: Bool)
 
-protocol APIResponseHandler: class {
+public protocol APIResponseHandler: class {
 }
 
-public extension APIResponseHandler {
+extension APIResponseHandler {
      public func verifyResponse<T: BaseMappable>(response: GenericAPIResponseResult<T>) -> GenericAPIVerificationResult {
         if response.successResponse == nil &&
             response.errorResponse == nil &&

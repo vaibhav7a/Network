@@ -45,16 +45,16 @@ struct AppServerListResponse<T: BaseMappable>: Mappable {
         data <- map["data"]
     }
 }
-typealias GenericCompletion<T: BaseMappable> = (
+public typealias GenericCompletion<T: BaseMappable> = (
     _ successResponse: T?,
     _ errorResponse: APIError?,
     _ error: Error?) -> Void
 
-typealias GenericArrayCompletion<T: BaseMappable> = (
+public typealias GenericArrayCompletion<T: BaseMappable> = (
     _ successResponse: [T]?,
     _ errorResponse: APIError?,
     _ error: Error?) -> Void
-enum ParameterType {
+public enum ParameterType {
     case httpBody
     case queryString
 }
