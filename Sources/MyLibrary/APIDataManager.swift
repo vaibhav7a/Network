@@ -58,7 +58,7 @@ enum ParameterType {
     case httpBody
     case queryString
 }
-protocol APIDataManager: class {
+public protocol APIDataManager: class {
 }
 extension APIDataManager {
     // API Call For Immutable Responses
