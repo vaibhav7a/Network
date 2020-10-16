@@ -76,7 +76,7 @@ extension APIDataManager {
                                       completion: @escaping GenericCompletion<T>) -> DataRequest {
         Log.i("Headers: \(APIHeader.shared.headers)")
         Log.i("Parameters: \(String(describing: parameters))")
-        let dataRequest = AF.request(endpoint.baseURL + endpoint.path,
+        let dataRequest = AF.request(endpoint.baseURL.appendingPathComponent(endpoint.path),
                                             method: endpoint.httpMethod,
                                             parameters: endpoint.parameter,
                                             encoding: parameterType == .queryString ? URLEncoding.queryString : JSONEncoding.default,
