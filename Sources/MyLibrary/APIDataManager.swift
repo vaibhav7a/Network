@@ -78,7 +78,7 @@ extension APIDataManager {
         Log.i("Parameters: \(String(describing: parameters))")
         let dataRequest = AF.request(endpoint.baseURL,
                                             method: endpoint.httpMethod,
-                                            parameters: parameters,
+                                            parameters: endpoint.parameter,
                                             encoding: parameterType == .queryString ? URLEncoding.queryString : JSONEncoding.default,
                                             headers: HTTPHeaders.init(APIHeader.shared.headers))
         .validate()

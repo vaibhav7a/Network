@@ -11,6 +11,7 @@ import Alamofire
 public protocol APIEndpoint {
     var baseURL: URL { get }
     var path: String { get }
+    var parameter: Parameters { get }
     var httpMethod: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
     var timeout: TimeInterval { get }
