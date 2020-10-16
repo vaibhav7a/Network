@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Localize_Swift
 
 enum APIError: Int, Error {
     case code201 = 201
@@ -52,74 +51,74 @@ extension APIError: LocalizedError {
      public var errorDescription: String? {
         switch self {
         case .code201:
-            return "code201".localized()
+            return "code201"
         case .code401:
-            return "code401".localized()
+            return "code401"
         case .code501:
-            return "code501".localized()
+            return "code501"
         case .code700:
-            return "code700".localized()
+            return "code700"
         case .code701:
-            return "code701".localized()
+            return "code701"
         case .code702:
-            return "code702".localized()
+            return "code702"
         case .code710:
-            return "code710".localized()
+            return "code710"
         case .code800:
-            return "code800".localized()
+            return "code800"
         case .code801:
-            return "code801".localized()
+            return "code801"
         case .code803:
-            return "code803".localized()
+            return "code803"
         case .code804:
-            return "code804".localized()
+            return "code804"
         case .code809:
-            return "code809".localized()
+            return "code809"
         case .code901:
-            return "code901".localized()
+            return "code901"
         case .code902:
-            return "code902".localized()
+            return "code902"
         case .code903:
-            return "code903".localized()
+            return "code903"
         case .code904:
-            return "code904".localized()
+            return "code904"
         case .code905:
-            return "code905".localized()
+            return "code905"
         case .code906:
-            return "code906".localized()
+            return "code906"
         case .code908:
-            return "code908".localized()
+            return "code908"
         case .code910:
-            return "code910".localized()
+            return "code910"
         case .code1000:
-             return "code1000".localized()
+             return "code1000"
         case .code1001:
-            return "code1001".localized()
+            return "code1001"
         case .code1002:
-            return "code1002".localized()
+            return "code1002"
         case .code1005:
-            return "code1005".localized()
+            return "code1005"
         case .code1007:
-            return "code1007".localized()
+            return "code1007"
         case .code1008:
-            return "code1008".localized()
+            return "code1008"
         case .code1020:
-            return "code1020".localized()
+            return "code1020"
         case .code1050:
             //AppDelegate.shared?.scrapUserDetails()
             //AppDelegate.shared?.moveToHome(target: nil)
-            return "code1050".localized()
+            return "code1050"
         case .code1051:
-            return "code1051".localized()
+            return "code1051"
         case .UNKNOWNERROR:
-            return "UNKNOWN_ERROR".localized()
+            return "UNKNOWN_ERROR"
         case .code955:
-            return "code955".localized()
+            return "code955"
         case.code608:
-            return "code608".localized()
+            return "code608"
 
         default:
-            return "SomethingWentWrong".localized()
+            return "SomethingWentWrong"
         }
 
     }

@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 enum APIMode {
     case localDevelopment
