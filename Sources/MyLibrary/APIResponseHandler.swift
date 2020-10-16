@@ -16,8 +16,8 @@ typealias GenericAPIVerificationResult = (success: Bool, errorResponse: Bool, er
 protocol APIResponseHandler: class {
 }
 
-extension APIResponseHandler {
-     func verifyResponse<T: BaseMappable>(response: GenericAPIResponseResult<T>) -> GenericAPIVerificationResult {
+public extension APIResponseHandler {
+     public func verifyResponse<T: BaseMappable>(response: GenericAPIResponseResult<T>) -> GenericAPIVerificationResult {
         if response.successResponse == nil &&
             response.errorResponse == nil &&
             response.error == nil {

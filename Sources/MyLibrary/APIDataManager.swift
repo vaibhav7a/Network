@@ -70,7 +70,7 @@ extension APIDataManager {
     ///   - parameterType: payload encoding
     ///   - completion: block to be exceuted when the response is received
     @discardableResult
-    func makeAPICall<T: BaseMappable>(to endpoint: APIEndpoint,
+    public func makeAPICall<T: BaseMappable>(to endpoint: APIEndpoint,
                                       withParameters parameters: Parameters? = nil,
                                       ofType parameterType: ParameterType = .httpBody,
                                       completion: @escaping GenericCompletion<T>) -> DataRequest {
