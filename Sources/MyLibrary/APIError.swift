@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum APIError: Int, Error {
+public enum APIError: Int, Error {
     case code201 = 201
     case code401 = 401
     case code501 = 501
